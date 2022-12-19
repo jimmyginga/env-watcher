@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { exec } = require("child_process");
 
-export function watch(keyFromPackageJson) {
+module.exports = function watch(keyFromPackageJson) {
   console.log("watching .env file changes...");
   fs.watchFile(".env", (event, fileName) => {
     console.log(".env file changed...");
